@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+            android:id="@+id/group1"
+            android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_home"
+                android:icon="@mipmap/home"
+                android:title="@string/nav_home"
+                android:checked="true"/>
+
+        <item
+            android:id="@+id/nav_announce"
+            android:icon="@mipmap/announce"
+            android:title="@string/nav_announce"/>
+        <item
+                android:id="@+id/nav_history"
+                android:icon="@mipmap/history"
+                android:title="@string/nav_history"/>
+
+    </group>
+
+    <group
+            android:id="@+id/group2"
+            android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_view_later"
+                android:icon="@mipmap/logout"
+                android:title="@string/logout_string" />
+    </group>
+
+</menu>

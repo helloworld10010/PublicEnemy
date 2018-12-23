@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">PublicEnemy</string>
+    <string name="app_name">全民公敌</string>
+    <string name="logout_string">退出登录</string>
+    <string name="nav_announce">发布小骗子</string>
+    <string name="nav_home">首页</string>
+    <string name="nav_history">发布历史</string>
 </resources>
