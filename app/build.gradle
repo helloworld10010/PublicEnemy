@@ -3,7 +3,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
-
+//def cfg = rootProject.ext.configuration
+def libs = rootProject.ext.libraries
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -30,9 +31,35 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "com.android.support:support-vector-drawable:${libs.supportVersion}"
     compile 'com.android.support:design:+'
     // 圆形图片
     compile 'de.hdodenhof:circleimageview:2.2.0'
 
+    /**
+     *    RxJava
+     */
+    implementation "io.reactivex.rxjava2:rxjava:${libs.rxjava}"
+    implementation "io.reactivex.rxjava2:rxandroid:${libs.rxandroid}"
+
+    /**
+     *    retrofit2
+     */
+    implementation "com.squareup.retrofit2:retrofit:${libs.retrofit}"
+    implementation "com.squareup.retrofit2:adapter-rxjava:${libs.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${libs.retrofit}"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${libs.rxjava2_adapter}"
+
+    /**
+     *   okhttp
+     */
+    implementation "com.squareup.okhttp3:okhttp:${libs.okhttp3}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${libs.logging}"
+
+    /**
+     *      butterknife
+     */
+    implementation "com.jakewharton:butterknife:${libs.butterknife}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${libs.butterknife}"
 
 }
