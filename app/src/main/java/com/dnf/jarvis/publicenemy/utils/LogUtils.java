@@ -16,7 +16,7 @@
 package com.dnf.jarvis.publicenemy.utils;
 
 import android.util.Log;
-import com.luliang.devmvp.BuildConfig;
+import com.dnf.jarvis.publicenemy.BuildConfig;
 
 
 /**
