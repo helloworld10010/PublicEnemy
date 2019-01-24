@@ -1,4 +1,5 @@
 package com.dnf.jarvis.publicenemy.mvp.base
 
-interface IBaseView {
+interface IBaseView<T> {
+    var presenter:T
 }

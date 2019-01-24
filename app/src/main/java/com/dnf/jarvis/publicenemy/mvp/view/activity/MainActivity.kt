@@ -6,11 +6,14 @@ import com.dnf.jarvis.publicenemy.R
 import com.umeng.socialize.UMShareAPI
 import android.content.Intent
 import android.support.design.widget.Snackbar
+import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
+import com.dnf.jarvis.publicenemy.mvp.view.adapter.MainPagerAdapter
+import com.dnf.jarvis.publicenemy.mvp.view.fragment.MessageFragment
+import com.dnf.jarvis.publicenemy.mvp.view.fragment.WorldFragment
 import com.dnf.jarvis.publicenemy.utils.setupActionBar
 import com.dnf.jarvis.publicenemy.utils.showSnackBar
 import kotlinx.android.synthetic.main.activity_main.*
@@ -31,6 +34,11 @@ class MainActivity : AppCompatActivity() {
         drawerLayout = drawer_layout.apply {
             setStatusBarBackground(R.color.colorPrimaryDark)
         }
+
+        val listFragments = arrayListOf(WorldFragment(), MessageFragment())
+        viewpager.adapter = MainPagerAdapter(supportFragmentManager, arrayListOf("世界","消息"),listFragments)
+        tabLayout.setupWithViewPager(viewpager)
+
 
         setupDrawerContent()
     }

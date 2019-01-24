@@ -10,18 +10,14 @@ import com.dnf.jarvis.publicenemy.DevMvpApplication;
  */
 
 public class ToastUtils {
-    private static Context context = DevMvpApplication.getAppContext();
-    private static Toast toast;
 
-    public static void show(@StringRes int resId) {
-        show(context.getResources().getString(resId));
-    }
+    private static Toast toast;
 
     public static void show(CharSequence text) {
         if (toast != null) {
             toast.cancel();
         }
-        toast = Toast.makeText(context, text, Toast.LENGTH_SHORT);
+        toast = Toast.makeText(DevMvpApplication.getAppContext(), text, Toast.LENGTH_SHORT);
         toast.show();
     }
 }
